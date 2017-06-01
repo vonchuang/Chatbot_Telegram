@@ -40,5 +40,5 @@ python3 bot.py
 
 示意圖如下：
 
-![fsm](./img/example.jpg)
+![example](./img/example.JPG)
 
