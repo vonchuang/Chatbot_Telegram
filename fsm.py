@@ -125,6 +125,11 @@ class TocMachine(GraphMachine):
         text = update.message.text
         return text.lower() == '上'
 
+    def is_going_to_music(self, update):
+        text = update.message.text
+        return text.lower() == '想'
+
+
     def is_going_to_koan3(self, update):
         text = update.message.text
         return text.lower() == '上'
@@ -323,12 +328,18 @@ class TocMachine(GraphMachine):
     def on_enter_koan2(self, update):
         text = update.message.text
         button_list = [
-            InlineKeyboardButton("左邊：學生活動中心",callback_data='1',url='http://www.geomatics.ncku.edu.tw/'),
-            InlineKeyboardButton("右邊：管理學院",callback_data='1',url='http://www.mse.ncku.edu.tw/'),
+            InlineKeyboardButton("左邊：學生活動中心",callback_data='1',url='https://www.youtube.com/watch?v=rZ-6lh8YJig'),
+            InlineKeyboardButton("右邊：管理學院",callback_data='1',url='http://www.management.ncku.edu.tw/main.php'),
         ]
         reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
         update.message.reply_photo(photo=open('img/koan2.jpg', 'rb'))
+        update.message.reply_text("想聽聽成大國樂舍的表演嘛~？")
         update.message.reply_text("附近建築：", reply_markup=reply_markup)
+
+    def on_enter_music(self, update):
+        update.message.reply_text("傳送音樂中...")
+        update.message.reply_audio(audio=open('audio/2016.mp3','rb'))
+        self.go_back(update)
 
     def on_enter_koan3(self, update):
         text = update.message.text

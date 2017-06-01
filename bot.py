@@ -14,7 +14,7 @@ app = Flask(__name__)
 bot = telegram.Bot(token=API_TOKEN)
 machine = TocMachine(
     states=[
-        'initial',
+        'initial', 'music',
         'sheng', 'dorm',
         'cheng', 'cheng1', 'cheng2', 'cheng3', 'cheng4', 'cheng5', 'cheng6', 'cheng7',
         'koan', 'koan1', 'koan2', 'koan3', 'koan4', 'koan5', 'koan6',
@@ -181,6 +181,20 @@ machine = TocMachine(
             'dest': 'koan2',
             'conditions': 'is_going_to_koan2'
         },
+        {
+
+            'trigger': 'advance',
+            'source': 'koan2',
+            'dest': 'music',
+            'conditions': 'is_going_to_music'
+        },
+        {
+            'trigger': 'go_back',
+            'source': 'music',
+            'dest': 'koan2',
+        },
+
+
         {
             'trigger': 'advance',
             'source': 'koan2',
