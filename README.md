@@ -1,5 +1,7 @@
 # TOC Project 2017
+
 A telegram bot based on a finite state machine
+
 主題：成功大學校園導覽
 
 
@@ -33,7 +35,9 @@ python3 bot.py
 ## How to interact with the bot
 
 起點位於成功校區門口與勝利校區門口中間，以成功校區方向為上方，輸入`上`，`下`，`左`，`右`，可以移動至校區內的各個地點
-每到一個點，Bot會回傳附近的圖片及相關地點的連結。
-示意圖如下：
 
+每到一個點，Bot會回傳附近的圖片及相關地點的連結。
+
+示意圖如下：
+![示意圖](./img/map.jpg)
 
