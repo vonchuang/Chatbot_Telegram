@@ -39,7 +39,6 @@ python3 bot.py
 每到一個點，Bot會回傳附近的圖片及相關地點的連結。
 
 示意圖如下：
-![示意圖](./img/example.jpg = 480x640)
-
-![示意圖](./img/map.jpg = 480x640)
+<img src="./img/example.jpg" width="480" height="640">
+<img src="./img/map.jpg" width="480" height="640">
 
