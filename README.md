@@ -21,7 +21,7 @@ ngrok http 5000
 
 After that, `ngrok` would generate a https URL.
 
-You should set `WEBHOOK_URL` (in app.py) to `your-https-URL/hook`.
+You should set `WEBHOOK_URL` (in bot.py) to `your-https-URL/hook`.
 
 #### Run the sever
 
