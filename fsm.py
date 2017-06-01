@@ -21,155 +21,385 @@ class TocMachine(GraphMachine):
             **machine_configs
         )
 
-    def is_going_back(self, update):
+ 
+#勝利校區=========== up ================== 
+    def is_going_to_sheng(self, update):
         text = update.message.text
-        update.message.reply_text("主題：國家\n選擇：\n1.國旗猜國名\n2.國歌猜國名\n3.國家有趣介紹影片")
-        return text.lower() == '返回'
+        return text.lower() == '下'
 
-#picture
-    def is_going_to_picture1(self, update):
+    def sheng_back_to_initial(self, update):
         text = update.message.text
-        return text.lower() == '國旗猜國名'
-    def is_going_to_picture2(self, update):
-        text = update.message.text
-        return text.lower() == '丹麥'
-    def is_going_to_picture3(self, update):
-        text = update.message.text
-        return text.lower() == '挪威'
-    def is_going_to_picture4(self, update):
-        text = update.message.text
-        return text.lower() == '瑞典'
-    def is_going_to_picture5(self, update):
-        text = update.message.text
-        return text.lower() == '冰島'
-    def is_going_to_picture6(self, update):
-        text = update.message.text
-        return text.lower() == '芬蘭'
+        return text.lower() == '上'
 
 
-#audio
-    def is_going_to_audio1(self, update):
+    def is_going_to_sheng(self, update):
         text = update.message.text
-        return text.lower() == '國歌猜國名'
-    def is_going_to_audio2(self, update):
+        return text.lower() == '下'
+
+#勝利校區=========== down ================== 
+    def is_going_back_sheng(self, update):
         text = update.message.text
-        return text.lower() == '以色列'
-    def is_going_to_audio3(self, update):
-        text = update.message.text
-        return text.lower() == '俄羅斯'
-    def is_going_to_audio4(self, update):
-        text = update.message.text
-        return text.lower() == '泰國'
-    def is_going_to_audio5(self, update):
-        text = update.message.text
-        return text.lower() == '美國'
+        return text.lower() == '上'
 
 
-#background
-    def is_going_to_background1(self, update):
-        text = update.message.text
-        return text.lower() == '國家有趣介紹影片'
 
-#final
-    def is_going_to_final(self, update):
+
+#成功校區=========== up ================== 
+    def is_going_to_cheng(self, update):
         text = update.message.text
-        return text.lower() == 'go to final'
+        return text.lower() == '上'
+
+    def cheng_back_to_initial(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+
+    def is_going_to_cheng1(self, update):
+        text = update.message.text
+        return text.lower() == '上'
+
+    def is_going_to_cheng2(self, update):
+        text = update.message.text
+        return text.lower() == '上'
+
+    def is_going_to_cheng3(self, update):
+        text = update.message.text
+        return text.lower() == '上'
+
+    def is_going_to_cheng4(self, update):
+        text = update.message.text
+        return text.lower() == '上'
+    def is_going_to_cheng5(self, update):
+        text = update.message.text
+        return text.lower() == '上'
+    def is_going_to_cheng6(self, update):
+        text = update.message.text
+        return text.lower() == '上'
+    def is_going_to_cheng7(self, update):
+        text = update.message.text
+        return text.lower() == '上'
+
+#成功校區=========== down ================== 
+    def is_going_back_cheng(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+
+    def is_going_back_cheng1(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+
+    def is_going_back_cheng2(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+
+    def is_going_back_cheng3(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+
+    def is_going_back_cheng4(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+    def is_going_back_cheng5(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+    def is_going_back_cheng6(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+
+
+
+#光復校區=========== up ================== 
+    def is_going_to_koan(self, update):
+        text = update.message.text
+        return text.lower() == '左'
+
+    def koan_back_to_initial(self, update):
+        text = update.message.text
+        return text.lower() == '右'
+
+
+    def is_going_to_koan1(self, update):
+        text = update.message.text
+        return text.lower() == '上'
+
+    def is_going_to_koan2(self, update):
+        text = update.message.text
+        return text.lower() == '上'
+
+    def is_going_to_koan3(self, update):
+        text = update.message.text
+        return text.lower() == '上'
+
+    def is_going_to_koan4(self, update):
+        text = update.message.text
+        return text.lower() == '上'
+
+    def is_going_to_koan5(self, update):
+        text = update.message.text
+        return text.lower() == '上'
+
+    def is_going_to_koan6(self, update):
+        text = update.message.text
+        return text.lower() == '上'
+
+#光復校區=========== down ================== 
+    def is_going_back_koan(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+
+    def is_going_back_koan1(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+
+    def is_going_back_koan2(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+
+    def is_going_back_koan3(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+
+    def is_going_back_koan4(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+
+    def is_going_back_koan5(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+
+
+#自強校區=========== up ================== 
+    def is_going_to_zi(self, update):
+        text = update.message.text
+        return text.lower() == '右'
+
+    def zi_back_to_initial(self, update):
+        text = update.message.text
+        return text.lower() == '左'
+
+
+
+    def is_going_to_zi1(self, update):
+        text = update.message.text
+        return text.lower() == '上'
+
+    def is_going_to_zi2(self, update):
+        text = update.message.text
+        return text.lower() == '上'
+
+    def is_going_to_zi3(self, update):
+        text = update.message.text
+        return text.lower() == '上'
+
+#自強校區=========== down ================== 
+    def is_going_back_zi(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+
+
+    def is_going_back_zi1(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+    def is_going_back_zi2(self, update):
+        text = update.message.text
+        return text.lower() == '下'
+
+
 
 #===============================================
 
+    def on_enter_initial(self, update):
+        text = update.message.text
+        update.message.reply_text("原點")
+        update.message.reply_photo(photo=open('img/initial.jpg', 'rb'))
 
+#勝利校區 
+    def on_enter_sheng(self, update):
+        text = update.message.text
+        update.message.reply_text("進入勝利校區")
+        update.message.reply_photo(photo=open('img/sheng.jpg', 'rb'))
 
-#ie picture
-    def on_enter_picture1(self, update):
-        update.message.reply_text("第1關:猜猜看，這是哪一國？")
-        update.message.reply_photo(photo='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/141px-Flag_of_Denmark.svg.png')
-
-
-    def on_exit_picture1(self, update):
-        print('Leaving picture1')
-
-    def on_enter_picture2(self, update):
-        update.message.reply_text("答對了！\n第2關:猜猜看，這是哪一國？")
-        update.message.reply_photo(photo='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/144px-Flag_of_Norway.svg.png')
-
-    def on_exit_picture2(self, update):
-        print('Leaving picture2')
-
-    def on_enter_picture3(self, update):
-        update.message.reply_text("答對了！\n第3關:猜猜看，這是哪一國？")
-        update.message.reply_photo(photo='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Sweden.svg/155px-Flag_of_Sweden.svg.png')
-
-    def on_exit_picture3(self, update):
-        print('Leaving picture3')
-
-    def on_enter_picture4(self, update):
-        update.message.reply_text("答對了！\n第4關:猜猜看，這是哪一國？")
-        update.message.reply_photo(photo='https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/144px-Flag_of_Iceland.svg.png')
-
-    def on_exit_picture4(self, update):
-        print('Leaving picture4')
-
-    def on_enter_picture5(self, update):
-        update.message.reply_text("答對了！\n第5關:猜猜看，這是哪一國？")
-        update.message.reply_photo(photo='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/156px-Flag_of_Finland.svg.png')
-
-    def on_exit_picture5(self, update):
-        print('Leaving picture5')
-
-    def on_enter_picture6(self, update):
-        update.message.reply_text("Win！")
-        update.message.reply_photo(photo='')
-
-    def on_exit_picture6(self, update):
-        print('Leaving picture6')
-
-#ie audio
-    def on_enter_audio1(self, update):
-        update.message.reply_text("第1關：聽聽看，這是什麼國家的國歌？（可能需稍等幾秒）")
-        update.message.reply_audio(audio=open('audio/1.mp3','rb'))
-
-    def on_exit_audio1(self, update):
-        print('Leaving audio1')
-
-    def on_enter_audio2(self, update):
-        update.message.reply_text("答對了！\n第2關：聽聽看，這是什麼國家的國歌？（可能需稍等幾秒）")
-        update.message.reply_audio(audio=open('audio/2.mp3','rb'))
-
-    def on_exit_audio2(self, update):
-        print('Leaving audio2')
-
-    def on_enter_audio3(self, update):
-        update.message.reply_text("答對了！\n第3關：聽聽看，這是什麼國家的國歌？（可能需稍等幾秒）")
-        update.message.reply_audio(audio=open('audio/3.mp3','rb'))
-
-    def on_exit_audio3(self, update):
-        print('Leaving audio3')
-
-    def on_enter_audio4(self, update):
-        update.message.reply_text("答對了！\n第4關：聽聽看，這是什麼國家的國歌？（可能需稍等幾秒）")
-        update.message.reply_audio(audio=open('audio/4.mp3','rb'))
-
-    def on_exit_audio4(self, update):
-        print('Leaving audio3')
-
-    def on_enter_audio5(self, update):
-        update.message.reply_text("Win!")
-
-    def on_exit_audio5(self, update):
-        print('Leaving audio3')
-
-
-#ie background
-    def on_enter_background1(self, update):
+    def on_enter_dorm(self, update):
+        text = update.message.text
         button_list = [
-        InlineKeyboardButton("youtube",callback_data='1',url='https://www.youtube.com/watch?v=y41eIfwQYtQ'),
+            InlineKeyboardButton("住宿服務組",callback_data='1',url='http://housing.osa.ncku.edu.tw/bin/home.php?Lang=zh-tw')
+        ]
+        reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
+        update.message.reply_photo(photo=open('img/drom.jpg', 'rb'))
+        update.message.reply_text("學生宿舍 ", reply_markup=reply_markup)
+
+#成功校區
+    def on_enter_cheng(self, update):
+        text = update.message.text
+        update.message.reply_text("進入成功校區")
+        update.message.reply_photo(photo=open('img/cheng.jpg', 'rb'))
+
+    def is_going_to_cheng1(self, update):
+        text = update.message.text
+        button_list = [
+            InlineKeyboardButton("左邊：博物館",callback_data='1',url='http://museum.ncku.edu.tw/bin/home.php'),
+            InlineKeyboardButton("右邊：工科系館",callback_data='1',url='http://www.es.ncku.edu.tw/esncku/zh/'),
+        ]
+        reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
+        update.message.reply_photo(photo=open('img/cheng1.jpg', 'rb'))
+        update.message.reply_text("附近建築：", reply_markup=reply_markup)
+
+    def on_enter_cheng2(self, update):
+        text = update.message.text
+        button_list = [
+            InlineKeyboardButton("左邊：物理系館",callback_data='1',url='http://www.phys.ncku.edu.tw/2012/en/'),
+            InlineKeyboardButton("右邊：資訊系館",callback_data='1',url='http://www.csie.ncku.edu.tw/ncku_csie/'),
+        ]
+        reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
+        update.message.reply_photo(photo=open('img/cheng2.jpg', 'rb'))
+        update.message.reply_text("附近建築：", reply_markup=reply_markup)
+
+    def on_enter_cheng3(self, update):
+        text = update.message.text
+        button_list = [
+            InlineKeyboardButton("左邊：化學系館",callback_data='1',url='http://web.che.ncku.edu.tw/'),
+            InlineKeyboardButton("右邊：資源系館",callback_data='1',url='http://www.mp.ncku.edu.tw/bin/home.php'),
+        ]
+        reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
+        update.message.reply_photo(photo=open('img/cheng3.jpg', 'rb'))
+        update.message.reply_text("附近建築：", reply_markup=reply_markup)
+
+    def on_enter_cheng4(self, update):
+        text = update.message.text
+        button_list = [
+            InlineKeyboardButton("左邊：測量系館",callback_data='1',url='http://www.geomatics.ncku.edu.tw/'),
+            InlineKeyboardButton("右邊：材料系館",callback_data='1',url='http://www.mse.ncku.edu.tw/'),
+        ]
+        reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
+        update.message.reply_photo(photo=open('img/cheng4.jpg', 'rb'))
+        update.message.reply_text("附近建築：", reply_markup=reply_markup)
+
+    def on_enter_cheng5(self, update):
+        text = update.message.text
+        button_list = [
+            InlineKeyboardButton("右邊：土木系館",callback_data='1',url='http://www.civil.ncku.edu.tw/'),
+        ]
+        reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
+        update.message.reply_photo(photo=open('img/cheng5.jpg', 'rb'))
+        update.message.reply_text("附近建築：", reply_markup=reply_markup)
+
+    def on_enter_cheng6(self, update):
+        text = update.message.text
+        button_list = [
+            InlineKeyboardButton("左邊：總圖書館",callback_data='1',url='http://www.lib.ncku.edu.tw/'),
+            InlineKeyboardButton("右邊：環工系館",callback_data='1',url='http://www.ev.ncku.edu.tw/'),
+        ]
+        reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
+        update.message.reply_photo(photo=open('img/cheng6.jpg', 'rb'))
+        update.message.reply_text("附近建築：", reply_markup=reply_markup)
+
+    def on_enter_cheng7(self, update):
+        text = update.message.text
+        button_list = [
+            InlineKeyboardButton("左邊：生科系館",callback_data='1',url='http://www.bio.ncku.edu.tw/'),
+            InlineKeyboardButton("右邊：水利系館",callback_data='1',url='http://www.mse.ncku.edu.tw/'),
+        ]
+        reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
+        update.message.reply_photo(photo=open('img/cheng7.jpg', 'rb'))
+        update.message.reply_text("附近建築：", reply_markup=reply_markup)
+
+
+#光復校區
+    def on_enter_koan(self, update):
+        text = update.message.text
+        update.message.reply_text("進入光復校區")
+        update.message.reply_photo(photo=open('img/koan.jpg', 'rb'))
+        return text.lower() == '左'
+
+    def on_enter_koan1(self, update):
+        text = update.message.text
+        button_list = [
+            InlineKeyboardButton("左邊：球場",callback_data='1',url='http://pe.acad.ncku.edu.tw/bin/home.php?Lang=zh-tw'),
+            InlineKeyboardButton("右邊：中正堂",callback_data='1',url='http://cet.acad.ncku.edu.tw/ste/'),
+        ]
+        reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
+        update.message.reply_photo(photo=open('img/koan1.jpg', 'rb'))
+        update.message.reply_text("附近建築：", reply_markup=reply_markup)
+
+    def on_enter_koan2(self, update):
+        text = update.message.text
+        button_list = [
+            InlineKeyboardButton("左邊：學生活動中心",callback_data='1',url='http://www.geomatics.ncku.edu.tw/'),
+            InlineKeyboardButton("右邊：管理學院",callback_data='1',url='http://www.mse.ncku.edu.tw/'),
+        ]
+        reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
+        update.message.reply_photo(photo=open('img/koan2.jpg', 'rb'))
+        update.message.reply_text("附近建築：", reply_markup=reply_markup)
+
+    def on_enter_koan3(self, update):
+        text = update.message.text
+        button_list = [
+            InlineKeyboardButton("左邊：唯農大樓",callback_data='1',url='http://www.ives.ncku.edu.tw/'),
+            InlineKeyboardButton("右邊：雲平大樓",callback_data='1',url='http://web.ncku.edu.tw/files/11-1000-166.php?Lang=zh-tw'),
+        ]
+        reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
+        update.message.reply_photo(photo=open('img/koan3.jpg', 'rb'))
+        update.message.reply_text("附近建築：", reply_markup=reply_markup)
+
+    def on_enter_koan4(self, update):
+        text = update.message.text
+        button_list = [
+            InlineKeyboardButton("左邊：工設系館",callback_data='1',url='http://www.ide.ncku.edu.tw/'),
+            InlineKeyboardButton("右邊：歷史系館",callback_data='1',url='http://www.his.ncku.edu.tw/'),
+        ]
+        reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
+        update.message.reply_photo(photo=open('img/koan4.jpg', 'rb'))
+        update.message.reply_text("附近建築：", reply_markup=reply_markup)
+
+    def on_enter_koan5(self, update):
+        text = update.message.text
+        update.message.reply_photo(photo=open('img/koan5.jpg', 'rb'))
+        update.message.reply_text("附近建築：", reply_markup=reply_markup)
+
+    def on_enter_koan6(self, update):
+        text = update.message.text
+        button_list = [
+            InlineKeyboardButton("左邊：都計系館",callback_data='1',url='http://www.up.ncku.edu.tw/'),
+            InlineKeyboardButton("右邊：修齊大樓",callback_data='1',url='http://www.flld.ncku.edu.tw/'),
+        ]
+        reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
+        update.message.reply_photo(photo=open('img/koan6.jpg', 'rb'))
+        update.message.reply_text("附近建築：", reply_markup=reply_markup)
+
+
+#自強校區
+    def on_enter_zi(self, update):
+        text = update.message.text
+        update.message.reply_text("進入自強校區")
+        update.message.reply_photo(photo=open('img/zi.jpg', 'rb'))
+
+    def on_enter_zi1(self, update):
+        text = update.message.text
+        button_list = [
+            InlineKeyboardButton("左邊：電機系館",callback_data='1',url='http://www.ee.ncku.edu.tw/'),
+            InlineKeyboardButton("右邊：系統系館",callback_data='1',url='http://w3.sname.ncku.edu.tw/'),
+        ]
+        reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
+        update.message.reply_photo(photo=open('img/zi1.jpg', 'rb'))
+        update.message.reply_text("附近建築：", reply_markup=reply_markup)
+
+    def on_enter_zi2(self, update):
+        text = update.message.text
+        button_list = [
+            InlineKeyboardButton("左邊：化工系館",callback_data='1',url='http://web.che.ncku.edu.tw/'),
+            InlineKeyboardButton("右邊：機械系館",callback_data='1',url='http://www.me.ncku.edu.tw/'),
+        ]
+        reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
+        update.message.reply_photo(photo=open('img/zi2.jpg', 'rb'))
+        update.message.reply_text("附近建築：", reply_markup=reply_markup)
+
+    def on_enter_zi3(self, update):
+        text = update.message.text
+        button_list = [
+            InlineKeyboardButton("自強操場",callback_data='1',url='http://www.up.ncku.edu.tw/'),
         ]
         reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=1))
-        update.message.reply_text("三色條紋國旗的有趣歷史", reply_markup=reply_markup)
-
-
-    def on_exit_background1(self, update):
-        print('Leaving background1')
+        update.message.reply_photo(photo=open('img/zi3.jpg', 'rb'))
+        update.message.reply_text("附近建築：", reply_markup=reply_markup)
 
 
 
