@@ -40,6 +40,6 @@ python3 bot.py
 
 示意圖如下：
 
-<img src="./img/example.png" width="270" height="480">
-<img src="./img/map.jpg" width="270" height="480">
+<img src="./img/map.jpg">
+<img src="./img/example.png">
 
