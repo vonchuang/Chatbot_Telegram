@@ -7,7 +7,7 @@ A telegram bot based on a finite state machine
 
 ## Secret Data
 
-`API_TOKEN` and `WEBHOOK_URL` in app.py **MUST** be set to proper values.
+`API_TOKEN` and `WEBHOOK_URL` in bot.py **MUST** be set to proper values.
 Otherwise, you might not be able to run the code.
 
 ### Run Locally
