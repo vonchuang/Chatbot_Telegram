@@ -40,6 +40,5 @@ python3 bot.py
 
 示意圖如下：
 
-<img src="./img/map.jpg">
-<img src="./img/example.png">
+![fsm](./img/example.jpg)
 
